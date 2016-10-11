@@ -3,34 +3,37 @@
 <html>
 <head>
   	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<title>Campeón del siglo</title>
+  	<style>
+        body {
+        	text-align: center;
+        }
+  	</style>
 </head>
 <body>
 	<!-- Cabecera -->
 	<header>
 		<figure>
-			<center>
-			<img src="media/escudo.png" title="El más grande!!!" width="200" height="200">
+			<img src="media/escudo.png" class="escudo" title="El más grande!!!" width="200" height="200">
 			<figcaption>Club Atlético Peñarol</figcaption>
 		</figure>
 	</header>
 
 	<!-- Contenido -->
 	<section>
-		<center>
-	    <article>
+	    <header>
 	        <figure>
                 <h2>Para cantar con la hinchada!</h2>
-                <video src="media/video.mp4" controls poster="media/escudo.png"> </video>
+                <video src="media/video.mp4" id="video" controls poster="media/escudo.png"> </video>
                 <figcaption>Canción "La Bicicleta"</figcaption>
             </figure>
             <figure>
                 <h2>Himno en audio!</h2>
-                <audio src="media/cancion.mp3" controls > </audio>
+                <audio src="media/cancion.mp3" id="cancion" controls > </audio>
                 <figcaption>Canción "Campéon del siglo"</figcaption>
 	        </figure>	        
-	    </article>
-	    </center>
+	    </header>
 	</section>
 
 	<!-- Contenido relacionado-->

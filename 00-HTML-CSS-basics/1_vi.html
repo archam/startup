@@ -2,34 +2,35 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sign up!</title>
 </head>
 <body>
 	<form id="Sign_up" method="post">
 		<ul>
-			<li><label for="name">First name:</label><br>
+			<li><label>First name:</label><br>
 			<input type="text" name="first_name" placeholder="Fulano" required><br></li>
-			<li><label for="lastname">Last name:</label><br>
+			<li><label>Last name:</label><br>
 			<input type="text" name="last_name" placeholder="Detal" required><br></li>
-			<li><label for"email">E.mail:</label><br>
+			<li><label>E.mail:</label><br>
 			<input type="email" name="e_mail" placeholder="user@server.com" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br></li>
-			<li><label for"birthday">Birthday:</label><br>
+			<li><label>Birthday:</label><br>
 			<input type="date" name="b_day" placeholder="yyyy/mm/dd" required><br><br></li>
 
-			<li><label for="favourite_sport">Which is your favourite sport?</label>
-				<select required>
+			<li><label>Which is your favourite sport?</label>
+				<select>
 					<option value="Football">Football</option>
 					<option value="Basketball">Basketball</option>
 					<option value="Swimming">Swimming</option>
 					<option value="Volley">Volley</option>
 					<option value="Other">Other</option>
 					<option value="None">I hate sports!</option>
-				</select>
-			</li><br>
-			<li><label for="small_bio">Tell us about your self</label><br>
+				</select><br>
+			</li>
+			<li><label>Tell us about your self</label><br>
 				<textarea rows="5" cols="50"></textarea>
-			</li><br>
-		</ul>
+			</li>
+		</ul><br>
 
 		<input type="submit" value="Submit!"></input>
 		<input type="reset" value="Reset"></input>
