@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Ejemplo de HTML5">
+		<meta name="keywords" content="películas, trailers">
+		<title>Estrenos</title>
+		<link rel="stylesheet" href="/css/estiloEstrenos.css">
+	</head>
+<body>
+	<div id="estructura">
+
+		<header id="cabecera">
+			<hgroup>
+				<h1>GLB Movies</h1>
+				<h2>Si no está acá... no existe!</h2>
+			</hgroup>
+		</header>	
+
+		<nav id="menu">
+			<ul>
+				<li>Home</li>
+				<li>Movies</li>
+				<li>Help</li>
+				<li>About us</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+
+		<section id="cuerpo">
+			<header>
+				<article id="botones">
+					<form>
+					  <button type="button">Todas</button>
+					  <button type="button">Populares</button>
+					  <button type="button">Recientes</button>
+					</form> 					
+				</article>
+				<article id="filtros">
+					<input type="text" name="first_name" placeholder="title, actor or description" required>
+					<select>
+						<option value="Football">Horror</option>
+						<option value="Basketball">Accion</option>
+						<option value="Swimming">Comedia</option>
+						<option value="Volley">Ciencia Ficcion</option>
+					</select>
+				</article>
+			</header>
+
+			<article id="peliculas">
+				<figure class="trailers">
+					<iframe width="150" height="150" src="https://www.youtube.com/watch?v=frdj1zb9sMY"></iframe>
+					<figcaption>
+						<a href="http://www.google.com">Descripción</a>
+					</figcaption>
+				</figure>
+				<figure class="trailers">
+					<iframe width="150" height="150" src="https://www.youtube.com/watch?v=frdj1zb9sMY"></iframe>
+					<figcaption>
+						<a href="http://www.google.com">Descripción</a>
+					</figcaption>
+				</figure>
+				<figure class="trailers">
+					<iframe width="150" height="150" src="https://www.youtube.com/watch?v=frdj1zb9sMY"></iframe>
+					<figcaption>
+						<a href="http://www.google.com">Descripción</a>
+					</figcaption>
+				</figure>
+				<figure class="trailers">
+					<iframe width="150" height="150" src="https://www.youtube.com/watch?v=frdj1zb9sMY"></iframe>
+					<figcaption>
+						<a href="http://www.google.com">Descripción</a>
+					</figcaption>
+				</figure>
+				<figure class="trailers">
+					<iframe width="150" height="150" src="https://www.youtube.com/watch?v=frdj1zb9sMY"></iframe>
+					<figcaption>
+						<a href="http://www.google.com">Descripción</a>
+					</figcaption>
+				</figure>
+				<figure class="trailers">
+					<iframe width="150" height="150" src="https://www.youtube.com/watch?v=frdj1zb9sMY"></iframe>
+					<figcaption>
+						<a href="http://www.google.com">Descripción</a>
+					</figcaption>
+				</figure>
+				<figure class="trailers">
+					<iframe width="150" height="150" src="https://www.youtube.com/watch?v=frdj1zb9sMY"></iframe>
+					<figcaption>
+						<a href="http://www.google.com">Descripción</a>
+					</figcaption>
+				</figure>
+				<figure class="trailers">
+					<iframe width="150" height="150" src="https://www.youtube.com/watch?v=frdj1zb9sMY"></iframe>
+					<figcaption>
+						<a href="http://www.google.com">Descripción</a>
+					</figcaption>
+				</figure>
+				<figure class="trailers">
+					<iframe width="150" height="150" src="https://www.youtube.com/watch?v=frdj1zb9sMY"></iframe>
+					<figcaption>
+						<a href="http://www.google.com">Descripción</a>
+					</figcaption>
+				</figure>
+				<figure class="trailers">
+					<iframe width="150" height="150" src="https://www.youtube.com/watch?v=frdj1zb9sMY"></iframe>
+					<figcaption>
+						<a href="http://www.google.com">Descripción</a>
+					</figcaption>
+				</figure>
+			</article>
+		</section>
+	
+
+
+
+
+		<footer id="pie">
+			<section id="links">
+				<ul>
+					<li><a href="http://www.facebook.com" target="_blank"><img src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=20 height=20/>facebook/GLBMovies</a></li>
+
+					<li><a href="http://twitter.com" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=20 height=20/>twitter/GLBMovies</a></li>
+
+					<li><a href="http://www.youtube.com" target="_blank"><img src="https://lh5.googleusercontent.com/-TXzlKCbKzWs/T6mYkDhTXyI/AAAAAAAAA1U/vm95Q2KwrYg/s32/youtube32.png" width=20 height=20/>youtube/GLBMovies</a></li>			
+				</ul>
+			</section>
+			<section class="nav">
+				<nav>
+					<ul>
+						<li>agregar_link</li>
+						<li>agregar_link</li>
+						<li>agregar_link</li>
+					</ul>
+				</nav>		
+			</section>
+			<section class="nav">
+				<nav>
+					<ul>
+						<li>agregar_link</li>
+						<li>agregar_link</li>
+						<li>agregar_link</li>
+					</ul>
+				</nav>		
+			</section>
+			<section id="copy">
+				<span>Copyright @ 2016</span>
+			</section>				
+		</footer>
+	
+	</div>
+</body>
+</html>
