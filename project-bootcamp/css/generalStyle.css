@@ -1,0 +1,288 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+h1 {
+	font: bold 25px verdana, sans-serif;
+}
+
+h2 {
+	font: bold 14px verdana, sans-serif;
+}
+
+body {
+	background-image: url("../images/home_back.jpg");
+}
+
+.container{
+	width: 980px;
+	margin: 0px auto;
+	font-size: 1em;
+}
+
+#cabecera {
+	display: block;
+	float: left;
+	width: 100%;
+	padding: 20px;
+	color: white;
+	background-image: url("../images/cab_back.jpg");
+}
+
+#menu {
+	display: block;
+	float: left;
+	width: 100%;
+	height: 3%;
+	padding: 0.5%;
+	background: -webkit-linear-gradient(top,white,gray);
+	background: -moz-linear-gradient(top,white,gray);
+}
+
+#menu ul{
+	padding-left: 1%;
+}
+
+#menu li {
+	display: inline-block;
+	list-style: none;
+	overflow: hidden;
+	margin-left: 1%;
+	font: bold 20px verdana, sans-serif;
+}
+
+#menu li:hover {
+    background-color: yellow;
+}
+
+#cuerpo {
+  	width: 100%;
+}
+
+#botones{
+	float: left;
+	margin: 1% 0% 1% 1%;
+}
+
+#filtros{
+	float: right;
+	margin: 1% 1% 1% 1%;
+}
+
+#trailers {
+  	display: block;
+	float: left;
+  	width: 73%;
+ 	margin: 1% 1%;
+}
+
+#trailers-all {
+  	display: block;
+	float: left;
+  	width: 100%;
+ 	text-align: center;
+}
+
+
+#left-desc {
+  	display: block;
+	float: left;
+  	width: 40%;
+  	margin: 6% 1% 6% 5%;
+  	padding: 2%;
+	color: white;
+	background: black;
+}
+
+#left-desc article{
+	margin: 5%;
+}
+
+#right-desc {
+	display: block;
+	float: right;
+  	width: 50%;
+  	text-align: center;
+}
+
+#right-desc article{
+	margin: 2%;
+}
+
+
+.posters{
+	width: 230px;
+	height: 400px;
+	margin: 0.2% 0.2%;
+}
+
+#banners {
+	display: block;
+	float: right;
+  	width: 20%;
+ 	margin: 1% 1%;
+	background: -webkit-linear-gradient(top,red,orange);
+	background: -moz-linear-gradient(top,red,orange);
+}
+
+.banner img{
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+
+#pie {
+	display: block;
+	clear: both;
+	width: 98%;
+	height: 25%;
+	padding: 1%;
+	background: -webkit-linear-gradient(top,gray,white);
+	background: -moz-linear-gradient(top,gray,white);
+}
+
+#links{
+	display: inline-block;
+	text-align: left;
+}
+
+#links ul li{
+	list-style: none;
+}
+
+#copy{
+	display: inline-block;
+	text-align: right;
+	padding-left: 85%;
+}
+
+/* para 980px o menos */
+@media screen and (max-width:980px) {
+    .container {
+        width:98%;
+    }
+    section {
+        width:68%;
+    }
+}
+
+/* para 700px o menos */
+@media screen and (max-width:700px) {
+    aside, section {
+        float:none;
+        width:96%;
+    }
+    nav, section {
+        font-size:1.2em;
+    }
+    aside {
+        margin-top:5px;
+    }
+    nav ul {
+        float:none;
+        clear:both;
+    }
+}
+
+/* para 480px o menos */
+@media screen and (max-width:480px) {
+    aside {
+        display:none;
+    }
+    nav, section {
+        font-size:1.5em;
+    }
+    section {
+        width:94%;
+    }
+    nav ul {
+        float:left;
+        clear:none;
+        width:50%;
+    }
+    nav ul li {
+        float:none;
+    }
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+	background-image: url("../images/home_back.jpg");
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+#MovieForm li{
+	list-style: none;
+	color: white;
+	text-shadow: 1px 1px black;
+	margin: 1%;
+}
+
+.modalboton{
+	margin: 1%;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+	background-image: url("../images/cab_back.jpg");
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+	background-image: url("../images/cab_back.jpg");
+    color: white;
+}
