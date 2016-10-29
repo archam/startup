@@ -6,6 +6,15 @@
 		<title>Movies</title>
 		<link rel="stylesheet" href="css/generalStyle.css">
 		<script src="javaFunctions.js"></script>
+		<script src="jquery-3.1.1.min.js" type="text/javascript"></script> 
+		<script>
+			$(document).ready(function(){
+				printAll();
+				printPopular();
+				printRecent();
+				printGenres();
+			}); 			
+		</script>		
 
 	</head>
 <body>
@@ -38,7 +47,7 @@
 			</article>
 			<article id="filtros">
 				<input type="text" value="" onchange="return printWord(this.value);" placeholder="title, actor or description">
-				<select id="genre-select1" onchange="return printFilterGenre(this.value);">
+				<select class="genre-select" onchange="return printFilterGenre(this.value);">
 					<script>printGenres()</script>
 				</select>
 			</article>
@@ -74,14 +83,6 @@
 		var btn = document.getElementById("myBtn");
 		// Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
-		// When the user clicks the button, open the modal 
-/*		btn.onclick = function() {
-		    modal.style.display = "block";
-		}*/
-		// When the user clicks on <span> (x), close the modal
-/*		span.onclick = function() {
-		    modal.style.display = "none";
--		}*/
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function(event) {
 		    if (event.target == modal) {
@@ -103,8 +104,8 @@
 						<li><input id="year" type="date" placeholder="Premiere year (yyyy)" required><br><br></li>
 						<li><input id="rating" type="text" placeholder="Choose a rating -between 1 and 5-" required><br></li>
 						<li><label><b>Category</b></label>
-							<select id="genre-select2">
-								<script>printGenres2()</script>
+							<select class="genre-select">
+								<script>printGenres()</script>
 							</select><br></li>
 						<li><label><b>Plot</b></label><br>
 							<textarea id="plot" rows="5" cols="50"></textarea>
