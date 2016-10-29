@@ -78,7 +78,7 @@ function buildURL(base, key, value){
 	return base + sep + key + '=' + value;
 }
 function selectMovieDesc(mov){
-	var buildUrl = buildURL("file:///home/ari/bootCamp/proyecto-bootcamp/movieDesc.html","id",mov);
+	var buildUrl = buildURL("movieDesc.html","id",mov);
 	javascript:window.location.href=buildUrl
 	return false;
 }
