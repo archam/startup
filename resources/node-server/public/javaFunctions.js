@@ -20,79 +20,44 @@ function printlastN(){
 	xhttp.send();
 }
 
-function printAll(){
+var url;
+
+function printFiltered(fil_type,word){
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function(){
 		if (this.readyState == 4 && this.status == 200) {
 			var movies = JSON.parse(this.responseText, dateReviver);
 			var to_print = printMovies(movies);
-			document.getElementById("trailers-all").innerHTML = to_print;
+			document.getElementById("trailers-all").innerHTML = to_print;	
 		}
 	};
-	xhttp.open("GET", "/api/movies/", true);
+
+	//print all
+	if (fil_type == 1){
+		url = "/api/movies/?";
+	}
+	//print recent
+	else if(fil_type == 2){
+		url = "/api/movies/?order=released&limit=5";
+	}
+	//print popular
+	else if(fil_type == 3){
+		url = "/api/movies/?order=rating&limit=5";
+	}
+	//print genre
+	else if(fil_type == 4){
+		url += "&genre=" + word;
+	}
+	//print word
+	else if(fil_type == 5){
+		url += "&search=" + word;
+	}
+
+	console.log(url);
+	xhttp.open("GET", url, true);
 	xhttp.send();
 
 	return false;	
-}
-
-function printRecent(){
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function(){
-		if (this.readyState == 4 && this.status == 200) {
-			var movies = JSON.parse(this.responseText, dateReviver);
-			var to_print = printMovies(movies);
-			document.getElementById("trailers-all").innerHTML = to_print;	
-		}
-	};
-	xhttp.open("GET", "/api/movies/?order=released&limit=5", true);
-	xhttp.send();
-
-	return false;	
-}
-
-function printPopular(){
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function(){
-		if (this.readyState == 4 && this.status == 200) {
-			var movies = JSON.parse(this.responseText, dateReviver);
-			var to_print = printMovies(movies);
-			document.getElementById("trailers-all").innerHTML = to_print;	
-		}
-	};
-	xhttp.open("GET", "/api/movies/?order=rating&limit=5", true);
-	xhttp.send();
-
-	return false;	
-}
-
-function printWord(word){
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function(){
-		if (this.readyState == 4 && this.status == 200) {
-			var movies = JSON.parse(this.responseText, dateReviver);
-			var to_print = printMovies(movies);
-			document.getElementById("trailers-all").innerHTML = to_print;	
-		}
-	};
-	xhttp.open("GET", "/api/movies/?search=" + word, true);
-	xhttp.send();
-
-	return false;
-}
-
-function printFilterGenre(word){
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function(){
-		if (this.readyState == 4 && this.status == 200) {
-			var movies = JSON.parse(this.responseText, dateReviver);
-			var to_print = printMovies(movies);
-			document.getElementById("trailers-all").innerHTML = to_print;	
-		}
-	};
-	xhttp.open("GET", "/api/movies/?genre=" + word, true);
-	xhttp.send();
-
-	return false;
 }
 
 function buildURL(base, key, value){
@@ -110,7 +75,7 @@ function printGenres(){
 	xhttp.onreadystatechange = function(){
 		if (this.readyState == 4 && this.status == 200) {
 			var genres = JSON.parse(this.responseText);
-			var print = "";
+			var print = "<option disabled selected value> -- Select a genre -- </option>";
 			for (i = 0; i < genres.length; i++){
 				print += '<option>' + genres[i] + '</option>';
 			}
@@ -149,10 +114,10 @@ function createMovie(){
 	var newMovie = {
 		title: document.getElementById("title").value,
 		year: document.getElementById("year").value,
-		released: "2016-04-29T00:00:00.0Z",
+		released: Date(),
 		genre: $(".genre-select").val(),
-		director: "John Doe",
-		actors: "Foo Bar, Dolor Sit",
+		director: document.getElementById("director").value,
+		actors: document.getElementById("actors").value,
 		plot: document.getElementById("plot").value,
 		poster: "https://s-media-cache-ak0.pinimg.com/236x/63/35/b3/6335b33481b913f437b4e395cf71f9b6.jpg",
 		rating: document.getElementById("rating").value
@@ -189,3 +154,8 @@ function dateReviver(key, value){
     }
     return value;
 };
+
+function getRandom(){
+	var x = Math.floor((Math.random() * 5) + 1);
+	return x;
+}

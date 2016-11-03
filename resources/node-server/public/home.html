@@ -94,15 +94,20 @@
 			<div class="modal-body">
 				<form id="MovieForm" method="post">
 					<ul>
-						<li><input id="title" type="text" placeholder="Title of the movie" required><br></li>
-						<li><input id="year" type="date" placeholder="Premiere year (yyyy)" required><br><br></li>
-						<li><input id="rating" type="text" placeholder="Choose a rating -between 1 and 5-" required><br></li>
+						<li><input id="title" type="text" placeholder="Title of the movie" maxlength="80" required><br></li>
+						<li><input id="year" type="date" placeholder="Premiere year(YYYY)" required><br><br></li>
+						<li><input id="director" type="text" placeholder="Director" required><br></li>
+						<li><input id="actors" type="text" placeholder="Actors" required><br><br></li>
+						<li><input id="rating" type="number" min="1" max="5" readonly><br></li>
+						<script>
+							document.getElementById("rating").value = getRandom();							
+						</script>
 						<li><label><b>Category</b></label>
-							<select class="genre-select">
+							<select class="genre-select" required>
 								<script>printGenres()</script>
 							</select><br></li>
 						<li><label><b>Plot</b></label><br>
-							<textarea id="plot" rows="5" cols="50"></textarea>
+							<textarea id="plot" rows="5" cols="50" maxlength="250"></textarea>
 						</li>
 					</ul><br>
 					<input class="modalboton" type="submit" value="Submit!" onclick="return createMovie();"></input>
